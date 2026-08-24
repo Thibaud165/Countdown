@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Countdown - Thibaud.site</title>
+        <link rel="icon" type="image/png" href="./favicon.png">
+        <meta name="description" content="Compte à rebours et afficheur de temps avant la fin de l'année scolaire. Affiche également les vacances scolaires (zone a uniquement). Créé par Thibaud Jourdan.">
+        <link rel="stylesheet" href="./styles/desktop-style.css" media="screen and (min-width: 1025px)" />
+        <link rel="stylesheet" href="./styles/tablet-style.css" media="screen and (min-width: 701px) and (max-width: 1124px)" />
+        <link rel="stylesheet" href="./styles/mobile-style.css" media="screen and (max-width: 700px)" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="box">
+            <button class="menu-button" id="menuButton"></button>
+            <div id="menu" class="menu">
+                <div class="Vacance menuSettings">
+                    <h4>Afficher les vacances</h4>
+                    <input type="checkbox" id="buttonVacance" checked />
+                </div>
+                <div class="Theme menuSettings">
+                    <h4>Mode sombre</h4>
+                    <input type="checkbox" id="buttonTheme" />
+                </div>
+                <div class="Timer menuSettings">
+                    <h4>Afficher mois restants</h4>
+                    <input type="checkbox" id="buttonTimer" />
+                </div>
+            </div>
+
+            <h1 class="titre">Countdown</h1>
+            <h4>Fin des cours dans <span id="compteurJours" class="coloredText">0</span> jours.</h4>
+            <h4>Prochaine vacances dans <span id="compteurJoursVacance" class="coloredText">0</span> jours.</h4>
+            <h4 id="timer" class="coloredText" style="display: none">00m : 00j : 00h : 00m : 00s</h4>
+            <h4 id="timerDay" class="coloredText" style="display: block">00j : 00h : 00m : 00s</h4>
+
+            <div id="box-case"></div>
+        </div>
+        <script src="script/case.js" defer></script>
+        <script src="script/menu.js" defer></script>
+        <script src="script/timer.js" defer></script>
+    </body>
+</html>

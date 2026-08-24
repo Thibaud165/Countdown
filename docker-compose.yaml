@@ -1,0 +1,8 @@
+services:
+  countdown:
+    build:
+      context: .
+    container_name: countdown
+    restart: unless-stopped
+    ports:
+      - "9348:9348"
